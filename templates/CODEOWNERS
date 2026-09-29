@@ -1,0 +1,9 @@
+# CODEOWNERS (tím obsahuje pka aj Mirka → four-eyes funguje oboma smermi)
+*                      @MMA-Analytics/deciders
+/.github/              @MMA-Analytics/deciders
+/docs/07_decisions/    @MMA-Analytics/deciders
+/docs/04_contracts/    @MMA-Analytics/deciders
+/ops/                  @MMA-Analytics/deciders
+/cron/                 @MMA-Analytics/deciders
+/tools/                @MMA-Analytics/deciders
+/AGENTS.md             @MMA-Analytics/deciders

@@ -1,0 +1,109 @@
+name: Brief
+description: Brief + kontrakt slicu (Operating Model T2 + T3)
+title: "BRIEF-<PROJ>-<NNN> · <predmet>"
+body:
+  - type: input
+    id: wave
+    attributes:
+      label: Wave · typ
+      placeholder: W1–W3 · VERIFY / KÓD / DOC / DECISION
+    validations:
+      required: true
+  - type: input
+    id: roles
+    attributes:
+      label: DECIDER · ARCHITECT · EXECUTOR · REVIEWER
+      placeholder: pka · Claude (chat) · Claude Code · GPT
+    validations:
+      required: true
+  - type: input
+    id: related
+    attributes:
+      label: Súvisí
+      placeholder: ADR-…, issue #…
+  - type: textarea
+    id: rules
+    attributes:
+      label: Pravidlá (R1…)
+      description: vetva, zákazy, čo sa nesmie dotknúť
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: 1 · Cieľ
+      description: jedna overiteľná end-to-end schopnosť (1–3 vety)
+    validations:
+      required: true
+  - type: input
+    id: baseline
+    attributes:
+      label: 2 · Baseline SHA
+      placeholder: main @ <SHA>
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: 3 · Vstup
+      description: dáta, súbory, závislosti
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: 4 · Výstup
+      description: čo existuje po slici
+    validations:
+      required: true
+  - type: textarea
+    id: in-scope
+    attributes:
+      label: 5 · V rozsahu
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: 6 · Výslovne mimo rozsahu
+    validations:
+      required: true
+  - type: input
+    id: contract
+    attributes:
+      label: 7 · Dátový/API kontrakt
+      placeholder: odkaz do docs/04_contracts alebo „n/a“
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 8 · Akceptačné kritériá
+      description: K1…Kn, každé overiteľné
+    validations:
+      required: true
+  - type: textarea
+    id: tests
+    attributes:
+      label: 9 · Povinné testy
+      description: ktoré, kde
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 10 · Povinný dôkaz
+      description: ku každému K — príkaz, výstup, screenshot, sha
+    validations:
+      required: true
+  - type: textarea
+    id: stop
+    attributes:
+      label: 11 · Stop podmienka
+      description: kedy EXECUTOR zastaví a pošle Decision Request
+    validations:
+      required: true
+  - type: textarea
+    id: after-merge
+    attributes:
+      label: Po zlúčení (iba na pokyn DECIDERA)
