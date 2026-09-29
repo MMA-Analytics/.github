@@ -1,0 +1,49 @@
+name: Decision Request
+description: Rozpor medzi briefom a realitou (Operating Model T4)
+title: "DECISION REQUEST · <repo> · <brief/slice>"
+body:
+  - type: textarea
+    id: requested
+    attributes:
+      label: Požadované
+      description: čo brief chce
+    validations:
+      required: true
+  - type: textarea
+    id: found
+    attributes:
+      label: Zistené
+      description: čo je realita (s dôkazom)
+    validations:
+      required: true
+  - type: textarea
+    id: conflict
+    attributes:
+      label: Konflikt
+      description: v čom sa to bije
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Možnosti
+      placeholder: "A) … B) … C) …"
+    validations:
+      required: true
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Odporúčanie
+      description: … (prečo)
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Bezpečne dokončené
+      description: čo je hotové a platí bez ohľadu na voľbu
+  - type: textarea
+    id: blocked
+    attributes:
+      label: Blokované
+      description: čo čaká na rozhodnutie

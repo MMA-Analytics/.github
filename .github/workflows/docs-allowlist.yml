@@ -1,0 +1,33 @@
+name: docs-allowlist
+
+# Reusable (Operating Model D9, V3): v docs/ smú pribúdať iba cesty zo slotov 01–09.
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  docs-allowlist:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: added/copied/renamed files under docs/ must be in a slot
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          if [ -z "$BASE" ] || [ "$BASE" = "0000000000000000000000000000000000000000" ]; then
+            files=$(git ls-tree -r --name-only "$HEAD" -- docs/)
+          else
+            files=$(git diff --name-only --diff-filter=ACR "$BASE...$HEAD" -- docs/)
+          fi
+          bad=$(printf '%s\n' "$files" | grep -Ev '^docs/0[1-9]_[a-z_-]+/' | grep -v '^$' || true)
+          if [ -n "$bad" ]; then
+            echo "::error::docs/ mimo slotov (^docs/0[1-9]_[a-z_-]+/):"
+            printf '%s\n' "$bad"
+            exit 1
+          fi
+          echo "docs-allowlist OK"
