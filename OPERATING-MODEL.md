@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Status | **Draft** → LIVE po schválení **ADR-0001** v `MMA-Analytics/prakesh` (four-eyes pka ↔ Mirko, Telegram) |
-| Verzia · dátum | v1.0 · 2026-09-29 |
+| Verzia · dátum | v1.1 · 2026-10-29 (§3.1 dočasná výnimka four-eyes) · v1.0 · 2026-09-29 |
 | Owner | MMA-Analytics · DECIDER pka |
 | Platí pre | všetky repozitáre MMA-Analytics (aquien, aquien-bbrsc, xerxes, tzdravie, cz-sport, metamod-web, infra, prakesh, cpag, 3D svet) a všetkých agentov (Claude, Claude Code, Codex, GPT, agenti PRAKESH) |
 | Domov (cieľ) | `MMA-Analytics/.github/OPERATING-MODEL.md` + šablóny v `.github` + skills v plugine `mma-delivery` |
@@ -78,6 +78,11 @@ Mimo svojej domény nerozhoduje žiadna úroveň. Rozpor medzi úrovňami → **
 | prakesh | pka | Claude (chat) | Claude Code | GPT · @stavbyveduci | Mirko |
 | 3D svet | Mirko | určí Mirko | určí Mirko | určí Mirko | pka |
 
+### 3.1 Dočasné výnimky (DECIDER)
+
+| Výnimka | Znenie | Platnosť | Zdroj |
+|---|---|---|---|
+| **Four-eyes bez druhého človeka** (G2, rola Schvaľovateľ) | V organizácii je dnes jediný človek, pka. Kým nepríde druhý, four-eyes = **pka** (DECIDER: label a merge) + **Codex** (brána review) + **Review OK stavbyvedúceho** (chat Claude; kód, infra, runbook, migrácie). Obsadenie per projekt je v `AGENTS.md`. **Výslovné riziko:** jediný človek, revieweri sú modely. G1 platí: schvaľuje človek (pka), autor návrhu ani model neschvaľuje. | do príchodu druhého človeka, najneskôr do revízie **2026-12-31**; automaticky sa nepredlžuje | rozhodnutie pka 2026-10-29 · [prakesh ADR-0021 U5](https://github.com/MMA-Analytics/prakesh/blob/main/docs/07_decisions/ADR-0021-prakesh-reset-roles-truth-gate.md) · [prakesh#215](https://github.com/MMA-Analytics/prakesh/issues/215#issuecomment-6506472518) |
 ---
 
 ## 4 · Tok práce
